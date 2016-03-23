@@ -11,22 +11,21 @@ both 1 and 3 that is evenly divisible by all numbers between 1 and 3.
 */
 
 function smallestCommons(arr) {
-  var finalVal;
-  var sortedArr = arr.sort(function(a,b) {
+  var sortedArr = arr.sort(function(a,b) { //Sorts argument in order
     return a - b;
   });
-  var counter = sortedArr[1] * (sortedArr[1]-1);
-  var multBy = sortedArr[1] * (sortedArr[1]-1);
-  var biggest = sortedArr[1];
-  function calledAgain(num) {
+  var counter = sortedArr[1] * (sortedArr[1]-1); //Multiplies biggest number in range with the second biggest number in range. Increments efficiently
+  var multBy = sortedArr[1] * (sortedArr[1]-1); //counter temp
+  var biggest = sortedArr[1]; //Allows for iteration of argument's range
+  function calledAgain(num) { // Determines if a number is divisible through all values in range
     for(var i = 2; i < biggest; i++) {
       if(num % i !== 0) {
         return calledAgain(num += counter);
       }
     }
-    return num;
+    return num; //Captures number divisible by all numbers in range
   }
-  return calledAgain(multBy);
+  return calledAgain(multBy); //Returns the output from calledAgain
 }
 console.log(smallestCommons([1,5]));
 
