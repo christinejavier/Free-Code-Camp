@@ -71,7 +71,7 @@ function convertToRoman(num) {
   return answer;
 }
 
-console.log(convertToRoman(5000000));
+console.log(convertToRoman(10));
 
 /*
 convertToRoman(2) should return "II".
