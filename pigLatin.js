@@ -13,8 +13,6 @@ function translate(str) {
   }
 
   if (!str.substr(0,1).match(regexp)) {
-    var beginning = [];
-    var end = [];
     var answer;
     str = str.split("");
     for (var i = 1; i < str.length; i++) {
