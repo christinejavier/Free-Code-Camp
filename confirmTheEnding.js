@@ -4,10 +4,11 @@ Check if a string (first argument, str) ends with the given target string (secon
 */
 
 function confirmEnding(str, target) {
-  var targetLength = target.length - 1;
-  var checkPoint = str.length - 1 - targetLength;
+  var targetLength = target.length;
+  var checkPoint = str.length - targetLength;
   return Boolean(str.substr(checkPoint) === target);
 }
+
 /*
 TESTS:
 confirmEnding("Bastian", "n") //should return true.
