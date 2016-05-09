@@ -28,9 +28,6 @@ function convertHTML(str) {
   str = str.join("");
   return str;
 }
-console.log(
-convertHTML('Hamburgers < Pizza < Tacos')
-);
 
 /*
 TESTS:
